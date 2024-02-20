@@ -17,3 +17,5 @@ function printname(name)
 }
 let print=printname("nyal")
 console.log(print);
+
+
