@@ -9,10 +9,21 @@
     
 </body>
     <script>
+      function createNewId(bgcolor,addtext) {
+        
       let div1 = document.createElement('div');
       div1.className="heading_01";
       let idname=Math.floor(Math.random()*10+1);
       div1.id = idname;
       console.log(div1);
+      div1.setAttribute("title","generated title")
+      div1.style.backgroundColor= bgcolor
+      div1.style.padding="15px"
+      //div1.innerHTML("Hello ,User")
+      const addname = document.createTextNode(addtext)
+      div1.appendChild(addname)
+      document.body.appendChild(div1)
+      }
+      createNewId("green","nyal gadhiya")
     </script>
 </html>
