@@ -31,10 +31,19 @@
             margin:10px 20px 10px 10px;
             border:2px solid saddlebrown;
         }
+        #clname
+        {
+            margin-top: -600px;
+            font-size: 5rem;
+            font-family: fantasy;
+            height: 200px;
+            width: 200px;
+        }
     </style>
 <body>
     <h1>Choose Any color-block given below </h1>
     <div id="container">
+        <div id="clname"></div>
         <span style="background-color: black" class="color-block" id="black"></span>
         <span style="background-color: white"class="color-block" id="white"></span>
         <span style="background-color: grey"class="color-block" id="grey"></span>
@@ -47,6 +56,10 @@
     const buttons = document.querySelectorAll('.color-block')
     const bodytag = document.querySelector('body')
 
+    function colorname(clname) {
+       const clnm = document.querySelector('#clname')
+       clnm.innerHTML= clname
+    }
     buttons.forEach( (btn) => {
         btn.addEventListener('click',(e) => {
             
@@ -54,28 +67,39 @@
             {
                 bodytag.style.backgroundColor = 'black'
                 bodytag.style.color = 'white'
+                colorname(e.target.id)
+                bodytag.style.transition = "all ease 2.2s"
             }
             if(e.target.id==="white")
             {
                 bodytag.style.backgroundColor = "white"
                 bodytag.style.color = 'black'
+                colorname(e.target.id)
+                bodytag.style.transition = "all ease 2.2s"
             }
             if(e.target.id==="grey")
             {
                 bodytag.style.backgroundColor = "grey"
+                bodytag.style.transition = "all ease 2.2s"
+                colorname(e.target.id)
             }
             if(e.target.id==="pink")
             {
                 bodytag.style.backgroundColor = "pink"
+                bodytag.style.transition = "all ease 2.2s"
+                colorname(e.target.id)
             }
             if(e.target.id==="orange")
             {
                 bodytag.style.backgroundColor = "orange"
+                bodytag.style.transition = "all ease 2.2s"
+                colorname(e.target.id)
             }
             if(e.target.id==="violet")
             {
                 bodytag.style.backgroundColor = "violet"
                 bodytag.style.transition = "all ease 2.2s"
+                colorname(e.target.id)
             }
         })
     })
