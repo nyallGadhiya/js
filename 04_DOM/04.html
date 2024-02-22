@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+        <li>python</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const addLi = document.createElement('li')
+        addLi.innerHTML = `${langName}`
+        addLi.style.color = 'beige'
+        document.querySelector('.language').appendChild(addLi)
+    }
+    addLanguage('c++')
+    addLanguage('typescript')
+
+    function addOptimisedLanguage(langName) {
+       const addli = document.createElement('li')
+       addli.appendChild(document.createTextNode(langName))
+       document.querySelector('.language').appendChild(addli)
+    }
+    addOptimisedLanguage("rust")
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+    secondlang.innerHTML = "nyal"
+
+    //secondlang.remove();
+</script>
+</html>
